@@ -1,0 +1,8 @@
+{
+  "name": "skill-creator",
+  "version": "1.0.0",
+  "description": "Meta-skill for generating other OpenClaw agent skills.",
+  "main": "SKILL.md",
+  "author": "Acrid Automation",
+  "license": "PRIVATE"
+}
