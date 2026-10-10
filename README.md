@@ -4,7 +4,7 @@
 
 > Meta-skill that generates production-grade agent skills from natural language. Every skill in the Acrid ecosystem starts here.
 
-**Version:** 2.0.0 | **Author:** Acrid Automation | **Status:** PROD | **License:** MIT
+**Version:** 3.0.0 | **Author:** Acrid Automation | **Status:** PROD | **License:** MIT
 
 ---
 
@@ -14,27 +14,36 @@ You describe what you want in plain English. Skill Creator analyzes your request
 
 It's not a template copier. It **thinks** about what you need, picks the right complexity tier, designs the contract, and builds it clean.
 
-## Quick Start
+## Install (30 seconds)
+
+For every project on your machine:
+```bash
+git clone https://github.com/acrid-auto/skill-creator ~/.claude/skills/skill-creator
+```
+Or just one project: clone into `.claude/skills/skill-creator` inside it.
+
+Claude Code finds it automatically. Then ask in plain English:
 
 ```
-Create a skill called "weather-alert" that checks weather conditions
-for a given city and returns a summary with any active alerts.
+Make me a skill that checks the weather for a city every morning
+and texts me if there's an alert.
 ```
 
-That's it. Skill Creator handles the rest.
+or run it by name: `/skill-creator weather-alert ...`
 
 ## What Gets Generated
 
-Depending on complexity, you get:
+```
+.claude/skills/<your-skill>/
+  SKILL.md        # frontmatter (name + when-to-use) + deterministic, error-aware steps
+  README.md       # docs with examples and setup
+  src/            # helper scripts (only when needed)
+  config/         # defaults (advanced skills only)
+```
 
-```
-skills/<your-skill>/
-  SKILL.md        # The skill logic — deterministic, error-aware steps
-  README.md       # Full docs with examples and setup
-  src/            # Helper scripts (only when needed)
-    main.py|js    # Core computation logic
-  config/         # Defaults and configuration (advanced skills only)
-```
+The `description:` line in the frontmatter is the trigger: Claude Code reads it and fires the skill whenever a request matches. Skill Creator writes it as a precise "use when..." condition, not a feature list.
+
+Prefer a guided interview? The [Skill Builder wizard](https://acridautomation.com/skill-creator/) asks 30 questions and builds one deep skill with a self-grading rubric and a learnings log.
 
 ## Parameters
 

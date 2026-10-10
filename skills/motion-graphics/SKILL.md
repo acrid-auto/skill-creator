@@ -1,3 +1,8 @@
+---
+name: motion-graphics
+description: "Use when the user wants a short animated video from a description: kinetic text, animated charts, logo reveals, UI mockups, product showcases (Remotion)."
+---
+
 # SKILL: motion-graphics
 
 ## Description

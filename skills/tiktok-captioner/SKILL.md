@@ -1,3 +1,8 @@
+---
+name: tiktok-captioner
+description: "Use when the user wants word-by-word animated TikTok-style captions added to an existing video (Whisper transcription + Remotion render)."
+---
+
 # SKILL: tiktok-captioner
 
 ## Description

@@ -1,3 +1,8 @@
+---
+name: video-creator
+description: "Use when the user wants a short vertical video made from just a topic: script, images, voiceover and captions generated end to end."
+---
+
 # SKILL: video-creator
 
 ## Description

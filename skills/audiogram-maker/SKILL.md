@@ -1,3 +1,8 @@
+---
+name: audiogram-maker
+description: "Use when the user wants an audio clip (podcast, voice note) turned into a shareable video with a waveform and synced captions."
+---
+
 # SKILL: audiogram-maker
 
 ## Description

@@ -1,6 +1,13 @@
+---
+name: skill-creator
+description: "Use when the user wants a new reusable skill, automation or tool integration for Claude Code, or wants to turn a manual workflow into a repeatable skill. Designs it, writes SKILL.md (+ helpers), runs quality gates."
+---
+
 # SKILL: skill-creator
 
 ## Description
+
+Writes new skills to `.claude/skills/<name>/` in the current project (or `~/.claude/skills/<name>/` when the user wants it everywhere). Every generated SKILL.md starts with YAML frontmatter (`name:` + a `description:` that says WHEN to use it) because that description is how Claude Code decides to fire the skill.
 
 The foundational meta-skill that architects and generates production-grade agent skills from natural language. This is the factory floor — every skill in the Acrid ecosystem is born here. It doesn't just scaffold files; it thinks through design, enforces quality gates, generates battle-tested logic, and outputs skills that work on first run.
 
@@ -59,14 +66,14 @@ Invoke this skill when:
 
    For **simple** skills:
    ```
-   skills/<name>/
+   .claude/skills/<name>/
      SKILL.md
      README.md
    ```
 
    For **standard** skills:
    ```
-   skills/<name>/
+   .claude/skills/<name>/
      SKILL.md
      README.md
      src/           # Only if computation is complex
@@ -74,7 +81,7 @@ Invoke this skill when:
 
    For **advanced** skills:
    ```
-   skills/<name>/
+   .claude/skills/<name>/
      SKILL.md
      README.md
      src/
